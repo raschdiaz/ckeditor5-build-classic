@@ -16,7 +16,6 @@ import Indent from '@ckeditor/ckeditor5-indent/src/indent';
 import List from '@ckeditor/ckeditor5-list/src/list';
 import Alignment from '@ckeditor/ckeditor5-alignment/src/alignment';
 import Font from '@ckeditor/ckeditor5-font/src/font';
-import Base64UploadAdapter from '@ckeditor/ckeditor5-upload/src/adapters/base64uploadadapter';
 
 export default class ClassicEditor extends ClassicEditorBase { }
 
@@ -31,8 +30,7 @@ ClassicEditor.builtinPlugins = [
 	Indent,
 	Heading,
 	Alignment,
-	Font,
-	Base64UploadAdapter
+	Font
 ];
 
 // Editor configuration.
