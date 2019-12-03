@@ -17,6 +17,13 @@ import List from '@ckeditor/ckeditor5-list/src/list';
 import Alignment from '@ckeditor/ckeditor5-alignment/src/alignment';
 import Font from '@ckeditor/ckeditor5-font/src/font';
 
+import Image from '@ckeditor/ckeditor5-image/src/image';
+import ImageCaption from '@ckeditor/ckeditor5-image/src/imagecaption';
+// import ImageStyle from '@ckeditor/ckeditor5-image/src/imagestyle';
+import ImageToolbar from '@ckeditor/ckeditor5-image/src/imagetoolbar';
+import ImageUpload from '@ckeditor/ckeditor5-image/src/imageupload';
+import Base64UploadAdapter from '@ckeditor/ckeditor5-upload/src/adapters/base64uploadadapter';
+
 export default class ClassicEditor extends ClassicEditorBase { }
 
 // Plugins to include in the build.
@@ -30,7 +37,13 @@ ClassicEditor.builtinPlugins = [
 	Indent,
 	Heading,
 	Alignment,
-	Font
+	Font,
+	Image,
+	ImageCaption,
+	// ImageStyle, error trying to add this plugin
+	ImageToolbar,
+	ImageUpload,
+	Base64UploadAdapter
 ];
 
 // Editor configuration.
@@ -58,6 +71,16 @@ ClassicEditor.defaultConfig = {
 			'fontFamily',
 			'fontColor',
 			'fontBackgroundColor',
+			'|',
+			'imageUpload',
+		]
+	},
+	image: {
+		toolbar: [
+			// 'imageStyle:full',
+			// 'imageStyle:side',
+			'|',
+			'imageTextAlternative'
 		]
 	},
 	// This value must be kept in sync with the language defined in webpack.config.js.
