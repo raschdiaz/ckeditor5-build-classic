@@ -7,7 +7,7 @@ import {
 } from '@ckeditor/ckeditor5-ui/src/dropdown/utils';
 
 export default class DynamicDropdown extends Plugin {
-	/*eslint-disable*/
+	/* eslint-disable */
 	init() {
 		const editor = this.editor;
 		editor.ui.componentFactory.add('DynamicDropdown', locale => {
@@ -40,5 +40,5 @@ export default class DynamicDropdown extends Plugin {
 			return dropdownView;
 		});
 	}
-	/*eslint-enable*/
+	/* eslint-enable */
 }
