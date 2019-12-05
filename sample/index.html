@@ -31,14 +31,20 @@
 
 	<script src="../build/ckeditor.js"></script>
 	<script>
-		ClassicEditor.create(document.querySelector('#editor'))
-			.then(editor => {
-				window.editor = editor;
-			})
-			.catch(err => {
-				console.error(err);
-				//console.error(err.stack);
-			});
+		ClassicEditor.create(document.querySelector('#editor'), {
+			DynamicDropdown: {
+				items: [
+					{ label: 'Opción 1', value: '/option-1' },
+					{ label: 'Opción 2', value: '/option-2' },
+					{ label: 'Opción 3', value: '/option-3' }
+				]
+			}
+		}).then(editor => {
+			window.editor = editor;
+		}).catch(err => {
+			console.error(err);
+			//console.error(err.stack);
+		});
 	</script>
 
 </body>

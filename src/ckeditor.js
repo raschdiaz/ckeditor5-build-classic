@@ -23,6 +23,7 @@ import ImageCaption from '@ckeditor/ckeditor5-image/src/imagecaption';
 import ImageToolbar from '@ckeditor/ckeditor5-image/src/imagetoolbar';
 import ImageUpload from '@ckeditor/ckeditor5-image/src/imageupload';
 import Base64UploadAdapter from '@ckeditor/ckeditor5-upload/src/adapters/base64uploadadapter';
+import DynamicDropdown from './plugins/dynamicDropdown';
 
 export default class ClassicEditor extends ClassicEditorBase { }
 
@@ -43,7 +44,8 @@ ClassicEditor.builtinPlugins = [
 	// ImageStyle, error trying to add this plugin
 	ImageToolbar,
 	ImageUpload,
-	Base64UploadAdapter
+	Base64UploadAdapter,
+	DynamicDropdown
 ];
 
 // Editor configuration.
@@ -73,6 +75,8 @@ ClassicEditor.defaultConfig = {
 			'fontBackgroundColor',
 			'|',
 			'imageUpload',
+			'|',
+			'DynamicDropdown'
 		]
 	},
 	image: {

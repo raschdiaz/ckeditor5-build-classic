@@ -97,6 +97,8 @@
   "dependencies": {
     "@ckeditor/ckeditor5-alignment": "^15.0.0",
     "@ckeditor/ckeditor5-font": "^15.0.0",
-    "@ckeditor/ckeditor5-upload": "^15.0.0"
+    "@ckeditor/ckeditor5-ui": "^15.0.0",
+    "@ckeditor/ckeditor5-upload": "^15.0.0",
+    "@ckeditor/ckeditor5-utils": "^15.0.0"
   }
 }
