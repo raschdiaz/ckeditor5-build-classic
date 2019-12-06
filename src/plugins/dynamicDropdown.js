@@ -10,6 +10,7 @@ export default class DynamicDropdown extends Plugin {
 	/* eslint-disable */
 	init() {
 		const editor = this.editor;
+		//console.log(Array.from(editor.ui.componentFactory.names()));
 		editor.ui.componentFactory.add('DynamicDropdown', locale => {
 			const dropdownView = createDropdown(locale);
 			dropdownView.buttonView.set({
